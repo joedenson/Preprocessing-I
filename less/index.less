@@ -186,6 +186,15 @@ nav {
 
 	//this closes the anchor tag
 
+
+	@media (max-width: 500px) {
+		justify-content: center;
+
+	}
+
+	// this closes the 500px nav a media query
+
+
 }
 
 //this closes the nav tag
@@ -196,8 +205,9 @@ nav {
 section .sec1 {
 
 	.flex-this();
+	// this is the .sec1 flexbox rule set mixin
 
-	img {
+	.photo {
 		width: 300px;
 		height: 300px;
 		-ms-transform: rotate(270deg);
@@ -207,6 +217,13 @@ section .sec1 {
 		transform: rotate(270deg);
 		margin-left: 3%;
 		margin-top: 5%;
+
+		@media (max-width: 500px) {
+			margin-left: 8%;
+
+		}
+
+		//this closes the 500px media query
 	}
 
 	// this closes the img section
@@ -218,7 +235,7 @@ section .sec1 {
 		font-family: @font;
 	}
 
-	// this closes the h1 tag
+	// this closes the .sec1 h1 tag
 
 	h2 {
 		font-size: 2.5rem;
@@ -227,7 +244,8 @@ section .sec1 {
 		font-family: @font;
 	}
 
-	//this closes the h2 tag
+	//this closes the .sec2 h2 tag
+
 	.p1 {
 		margin: 2% 3%;
 		border-top: 1px solid black;
@@ -252,16 +270,42 @@ section .sec1 {
 
 	//this closes the team-up class
 
+	@media (max-width: 500px) {
+
+		h1,
+		h2,
+		p {
+			margin-bottom: 4%;
+		}
+
+		//this closes the .sec1 h1, .sec1 h2, .sec1 p media query section
+
+		a {
+			margin-left: 20%;
+		}
+
+		//this closes the nav a 500px media query section
+
+		p {
+
+			margin-top: 4%;
+		}
+
+		// this closes the .sec1 p 500px media query section
+	}
+
+	//this closes the 500px media query section
 
 }
 
 // this closes section .sec1 
 
-
 p {
 	margin-top: 2%;
 	font-size: 1.8rem;
 }
+
+// this closes the .sec1 p tag
 
 
 /**********SECTION 2 STYLES*******/
@@ -323,6 +367,30 @@ p {
 		padding-top: 2%;
 	}
 
+	@media (max-width: 500px) {
+
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 100%;
+
+		.listen-up {
+			margin-top: 10%;
+
+		}
+
+		.listen-up p {
+			margin-top: 10%;
+			width: 100%;
+		}
+
+		.stuff {
+			margin-top: 10%;
+
+		}
+
+
+	}
 }
 
 // this closes the .sec2 class section
@@ -339,8 +407,12 @@ p {
 	}
 
 	// this closes the sec3 h3 tag
-
-
+	@media (max-width: 500px) {
+		h3 {
+			margin-left: 25%;
+			margin-top: 10%;
+		}
+	}
 }
 
 // this closes the sec3 class section
@@ -376,13 +448,30 @@ table {
 
 /*********CONTACT ME STYLES******/
 
-.contact-me h3 {
-	font-size: 2.2rem;
-	font-weight: bold;
-	margin-top: 3%;
-	font-family: @font;
-}
+.contact-me {
 
+	h3 {
+		font-size: 2.2rem;
+		font-weight: bold;
+		margin-top: 3%;
+		font-family: @font;
+	}
+
+	@media (max-width: 500px) {
+		h3 {
+
+			margin-top: 10%;
+			margin-left: 25%;
+			margin-bottom: 5%;
+		}
+
+		p {
+			margin-left: 15%;
+
+		}
+
+	}
+}
 
 
 /**********FOOTER STYLES*******/
@@ -395,82 +484,9 @@ footer {
 	margin-top: 3%;
 	padding-top: 2%;
 	padding-bottom: 2%;
-}
 
-
-/***********MEDIA QUERIES*********/
-
-
-@media (max-width: 500px) {
-
-	nav {
-
-		justify-content: center;
-	}
-
-	.photo {
-
-		margin-left: 8%;
-
-	}
-
-	.sec1 h1,
-	.sec1 h2,
-	.sec1 p {
-		margin-bottom: 4%;
-	}
-
-	.sec1 p {
-
-		margin-top: 4%;
-	}
-
-	.sec2 {
-		flex-direction: column;
-		flex-wrap: wrap;
-		align-items: center;
-		width: 100%;
-
-	}
-
-	.listen-up {
-		margin-top: 10%;
-
-	}
-
-	.listen-up p {
-		margin-top: 10%;
-		width: 100%;
-	}
-
-	.stuff {
-		margin-top: 10%;
-
-	}
-
-	.sec3 h3 {
-		margin-left: 25%;
-		margin-top: 10%;
-	}
-
-	.contact-me h3 {
+	@media (max-width: 500px) {
 
 		margin-top: 10%;
-		margin-left: 25%;
-		margin-bottom: 5%;
 	}
-
-	.contact-me p {
-		margin-left: 15%;
-
-	}
-
-	footer {
-		margin-top: 10%;
-	}
-
-	.sec1 a {
-		margin-left: 20%;
-	}
-
 }
